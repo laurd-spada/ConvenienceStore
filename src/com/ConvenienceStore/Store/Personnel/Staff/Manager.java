@@ -3,18 +3,20 @@ package com.ConvenienceStore.Store.Personnel.Staff;
 public class Manager {
     private int id;
     private String name;
-    private int salary;
 
-    public Manager(int id, String name, int salary) {
+    public Manager(int id, String name) {
         this.id = id;
         this.name = name;
-        this.salary = salary;
     }
-
+    /**
+     * @return id of manager
+     * */
     public int getId() {
         return id;
     }
-
+    /**
+     * @return name of manager
+     * */
     public String getName() {
         return name;
     }

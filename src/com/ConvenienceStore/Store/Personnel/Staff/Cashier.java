@@ -1,6 +1,13 @@
 package com.ConvenienceStore.Store.Personnel.Staff;
 
 public class Cashier {
+    // Creating a constructor
+    /**
+     * This constructor is responsible for creating new teachers object.
+     * @param id id for the cashier. not going to change id, if its set
+     * @param name name of the cashier. not going to change name, if its set
+     * @param salary salary of the cashier. going to change id, if it's a promotion
+     * **/
     private int id;
     private String name;
     private int salary;
@@ -10,15 +17,21 @@ public class Cashier {
         this.name = name;
         this.salary = salary;
     }
-
+    /**
+     * @return id of cashier
+     * */
     public int getId() {
         return id;
     }
-
+    /**
+     * @return name of cashier
+     * */
     public String getName() {
         return name;
     }
-
+    /**
+     * @return salary of cashier
+     * */
     public int getSalary() {
         return salary;
     }

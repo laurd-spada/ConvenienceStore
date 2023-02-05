@@ -1,7 +1,5 @@
 package com.ConvenienceStore.Store.Personnel;
 
-
-
 import com.ConvenienceStore.Store.Personnel.Staff.Cashier;
 import com.ConvenienceStore.Store.Personnel.Staff.Manager;
 
@@ -9,26 +7,30 @@ import java.util.List;
 
 public class Personnel {
     private List<Cashier> cashiersList;
-    private List<Manager> managers;
-
-    public Personnel(List<Cashier> cashiersList, List<Manager> managers){
+    private Manager manager;
+    /**
+     * A new object is created
+     * @param cashiersList a list of cashiers
+     * @param manager a list of managers
+     * */
+    public Personnel(List<Cashier> cashiersList, Manager manager){
         this.cashiersList = cashiersList;
-        this.managers = managers;
+        this.manager = manager;
     }
-
+    /**
+     * @return a list of cashiers in the company
+     * */
     public List<Cashier> getCashiersList() {
         return cashiersList;
     }
-
+    /**
+     * @param cashier the cashiers that are to be added*/
     public void addToCashiersList(Cashier cashier) {
         cashiersList.add(cashier);
     }
 
-    public List<Manager> getManagers() {
-        return managers;
+    public Manager getManagers() {
+        return manager;
     }
 
-    public void addToManagers(Manager manager) {
-        managers.add(manager);
-    }
 }
