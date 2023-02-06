@@ -6,7 +6,7 @@ import com.ConvenienceStore.Store.Store;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Cashier {
+public class Cashier extends Store{
     // Creating a constructor
     /**
      * This constructor is responsible for creating new teachers object.
@@ -17,6 +17,8 @@ public class Cashier {
     private int id;
     private String name;
     private int salary;
+    static List<Product> customerProducts = new ArrayList<>();
+    public Cashier(){}
 
     public Cashier(int id, String name, int salary) {
         this.id = id;
@@ -42,10 +44,16 @@ public class Cashier {
         return salary;
     }
 
-    public static void sellProduct(String productName){
-        //for(Product a: )
+    public void sellProduct(List<Product> orderedProduct){
+        for(Product a: orderedProduct){
+            for(Product x: getProduct()){
+                if(a.getName().equals(x.getName())){
+                    customerProducts.add(a);
+                }
+            }
+        }
     }
-    public static void dispenseReceipt(){
-
+    public void dispenseReceipt(){
+        System.out.println(customerProducts.toString());
     }
 }

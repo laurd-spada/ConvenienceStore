@@ -8,8 +8,12 @@ import java.util.List;
 public class Store {
     private static List<Product> listOfProducts = new ArrayList<>();
 
-    public static void getProduct(List<Product> goods){
-        listOfProducts = goods;
+    public void setProduct(List<Product> stock){
+        this.listOfProducts = stock;
     }
+    public static List<Product> getProduct(){
+        return listOfProducts;
+    }
+
 
 }

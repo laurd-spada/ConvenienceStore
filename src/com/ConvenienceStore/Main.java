@@ -28,7 +28,13 @@ public class Main {
         totalGoods.add(goods3);
 
         Store st = new Store();
-        st.getProduct(totalGoods);
+        st.setProduct(totalGoods);
+
+        Product prod1 = new Product(111, "Bag of RIce", 25000);
+        Product prod2 = new Product(543, "Indomie", 15000);
+        List<Product> order = new ArrayList<>();
+        order.add(prod1);
+        order.add(prod2);
 
 
 //        Manager mg = new Manager();
@@ -40,6 +46,9 @@ public class Main {
 //        mg.check();
 //        mg.fireCashier("Daniel O");
 //        mg.check();
+        Cashier work = new Cashier();
+        work.sellProduct(order);
 
+        work.dispenseReceipt();
     }
 }
