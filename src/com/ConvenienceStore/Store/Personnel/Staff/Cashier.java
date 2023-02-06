@@ -1,5 +1,11 @@
 package com.ConvenienceStore.Store.Personnel.Staff;
 
+import com.ConvenienceStore.Store.Product.Product;
+import com.ConvenienceStore.Store.Store;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class Cashier {
     // Creating a constructor
     /**
@@ -36,13 +42,10 @@ public class Cashier {
         return salary;
     }
 
-    public static void sellProduct(){
-
+    public static void sellProduct(String productName){
+        //for(Product a: )
     }
-    public static void dispenseRecipt(){
-
-    }
-    public static void searchProduct(){
+    public static void dispenseReceipt(){
 
     }
 }

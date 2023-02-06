@@ -17,16 +17,14 @@ public class Personnel {
         this.cashiersList = cashiersList;
         this.manager = manager;
     }
+    public Personnel(List<Cashier> cashiersList){
+        this.cashiersList = cashiersList;
+    }
     /**
      * @return a list of cashiers in the company
      * */
     public List<Cashier> getCashiersList() {
         return cashiersList;
-    }
-    /**
-     * @param cashier the cashiers that are to be added*/
-    public void addToCashiersList(Cashier cashier) {
-        cashiersList.add(cashier);
     }
 
     public Manager getManagers() {
